@@ -1,0 +1,23 @@
+\documentclass[a4paper]{report}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage{hyperref}
+%katalog rozdziałów
+\newcommand\chapterdir{chapters}
+
+%odpowiednio sformatowane myślniki do dialogów.
+\newcommand\ds{\\---~}
+\newcommand\dm{---~}
+\newcommand\de{\\}
+
+\begin{document}
+	\title{KoSMoRaMuS}
+	\author{Antyradek}
+	\date{\today}
+	\maketitle
+	\tableofcontents
+	\input{\chapterdir/description.tex}
+\end{document}

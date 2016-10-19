@@ -1,0 +1,6 @@
+*.dvi
+*.log
+*.aux
+*.backup
+*.out
+*.toc
