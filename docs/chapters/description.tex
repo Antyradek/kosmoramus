@@ -1,3 +1,100 @@
-\chapter{Opis gry}
-Grasz i się dobrze bawisz. \\
-TODO: Wysilić się trochę przy pisaniu tej dokumentacji. Ludzie patrzą...
+\chapter{Opis gracza}
+\section{Cechy gracza}
+\kosmoramus to gra fabularna. Są w niej gracze a nad wszystkim czuwa Mistrz Gry.
+
+Gracz posiada 6 cech podstawowych za pomocą których wykonuje testy na umiejętności i używanie broni.
+Cechy są modyfikowane przez chipy i różne inne dodatki.
+\begin{description}
+ \item[Siła \abs] Siła decyduje o tym jak silny i potężny jest gracz.
+ \item[Inteligencja \abi] Jak bardzo udaje mu się rozwiązywać problemy i co potrafi wymyślić.
+ \item[Chamstwo \abh] Odwaga, bezwzględność i odporność. Chamski gracz ma wysoką siłę woli.
+ \item[Towarzyskość \abt] Altruizm, rozmowy z innymi, dar przekonywania. Towarzyskie osoby mogą dobrze zarządzać innymi i organizować.
+ \item[Atletyzm \aba] Skoczność, gibkość i unik. Atleci potrafią robić wspaniałe rzeczy, ale przez bardzo krótki okres czasu.
+ \item[Percepcja \abp] Gracze z wysoką percepcją widzą więcej i mogą się skupić. Potrzebna ona jest do dokładnego, acz wolnego sterowania.
+\end{description}
+
+Każda cecha odpowiada określonemu typowi człowieka.
+Zatem są one przeciwstawne parami, rozwijanie jednej cechy jest kosztem naprzeciwległej.
+\begin{itemize}
+ \item \abs jest naprzeciwko \abi.
+ \item \abh jest naprzeciwko \abt.
+ \item \aba jest naprzeciwko \abp.
+\end{itemize}
+
+Najprościej jest zaprezentować zdolności gracza na wierzchołkach ośmiościanu foremnego.
+\begin{itemize}
+ \item Cechy przeciwstawne są na przeciwstawnych wierzchołkach, na każdej osi układu współrzędnych jedna para.
+ \item Bok ośmiościanu powinien wynosić 10.
+ \item Na każdym boku jest siatka z trójkątów po której gracz liczy test cechy.
+\end{itemize}
+
+Rzucając jedną \dxx liczymy odległość punktu naszego gracza od wierzchołka po trójkątnej kratce, jeśli jest mniejsza niż wyrzucona wartość, to test jest zdany.
+
+Dodatkowo każdy z bohaterów posiada:
+\begin{description}
+ \item [Wskaźnik niekompatybilności \abnkp] Jak bardzo ciało gracza jest niespójne ze sobą. Chipy i mutacje obniżają \abnkp w różny sposób. Rasowo czyste istoty mają zerową \abnkp.
+ \item [Życie \abzyc] Standardowe punkty obrażeń, ile jest w stanie gracz znieść.
+\end{description}
+
+
+\section{Życie}
+Ilość punktów życia gracza zależy od jego siły i jest równa $20 - \abs$.
+Tyle uszkodzeń może on stracić w grze i nie wpłynie to na rozgrywkę.
+Ta wartość może być modyfikowana przez chipy, mutacje, zbroje itp.
+Jednak spadek poniżej zera powoduje rany krytyczne.
+
+Każda kolejna rana krytyczna powoduje w kolejności:
+\begin{enumerate}
+\item Problem psychiczny
+\item Korupcja kryształu umiejętności.
+\end{enumerate}
+
+\section{Korupcja}
+Korupcja kryształu to losowe zaznaczenie zniszczonego obszaru.
+Liczenie po tej drodze umiejętności liczy się podwójnie.
+Może się zdarzyć, że korupcja wpasuje się na wierzchołku, wtedy niestety każdy test będzie obarczony dodatkowym utrudnieniem.
+
+Aby policzyć korupcję:
+\begin{enumerate}
+ \item Wybierz wierzchołek rzucając \dvi, ustaw go na górze.
+ \item Idź w dół po krawędzi najbliższej do twojego punktu \dxx kratek.
+ \item Idź w prawo \dxx[2] kratek.
+ \item Zaciemnij wszystkie trójkąty w odległości 2 od wylosowanego punktu. Najczęściej jest to sześciokąt o boku 2, ale na wierzchołku będzie to kwadrat.
+\end{enumerate}
+Może się zdarzyć, że punkt gracza znajdzie się w zaciemnionym obszarze. 
+Na szczęście cechy można modyfikować i w przyszłości uciec z utrudniającego obszaru.
+
+\section{Chipy}
+Chipy dzielą się na aktywne i pasywne.
+
+Aktywne dają dodatkowe zdolności, jak umiejętność odbioru fal radiowych, lutownice w palcach, czy noktowizor w oczach.
+Przed użyciem chipu należy przejść test \abnkp, czyli wyrzucić za pomocą \dxx więcej, niż wartość \abnkp. 
+Niezdanie testu \abnkp powoduje widowiskowe uszkodzenie chipu z różnymi dziwacznymi skutkami.
+Każdy chip związany jest także z pewną cechą, której to test trzeba zdać przed użyciem chipu, jeśli nasza \abnkp nie jest za wysoka.
+Każdy zamontowany chip dodaje pewną ilość \abnkp dla gracza.
+Chipy montują się automatycznie po zakupieniu, lub znalezieniu.
+
+Chipy pasywne mogą obciągać wierzchołki kryształu umiejętności, rysujemy wtedy kwadrat wokół odpowiedniego wierzchołka i liczymy drogę tylko do granicy.
+W ten sposób ułatwiamy sobie zdawanie testów danej cechy.
+Chipy pasywne także nie uszkadzają się i nie trzeba dla nich zdawać testów \abnkp, jednakże cena za ich zamontowanie często jest bardzo wysoka i mocno zwiększa ilość \abnkp.
+Te chipy nie montują się same, potrzeba operacji chirurgicznej, aby odpowiednio móc korzystać z jego dobrodziejstw.
+Operacja może pójść w różny sposób, nieudana w pełni może wpłynąć tymczasowo na \abzyc, zmniejszyć moc chipu, albo zwiększyć nadmiernie \abnkp.
+
+\section{Uszkodzenia chipu}
+
+\section{Moc}
+%rozwinięcie mocy
+\section{Mutacje}
+
+\section{Broń}
+%wkłady 
+\section{Przedmioty}
+%automatyczne ładowniki itp.
+\section{Wiedza}
+
+\section{Problem Psychiczny}
+
+
+
+
+
