@@ -21,14 +21,12 @@ Zatem są one przeciwstawne parami, rozwijanie jednej cechy jest kosztem naprzec
  \item \aba jest naprzeciwko \abp.
 \end{itemize}
 
-Najprościej jest zaprezentować zdolności gracza na wierzchołkach ośmiościanu foremnego.
+Najprościej jest zaprezentować zdolności gracza na wierzchołkach ośmiościanu foremnego zwanego kryształem osobowości:
 \begin{itemize}
  \item Cechy przeciwstawne są na przeciwstawnych wierzchołkach, na każdej osi układu współrzędnych jedna para.
  \item Bok ośmiościanu powinien wynosić 10.
  \item Na każdym boku jest siatka z trójkątów po której gracz liczy test cechy.
 \end{itemize}
-
-Rzucając jedną \dxx liczymy odległość punktu naszego gracza od wierzchołka po trójkątnej kratce, jeśli jest mniejsza niż wyrzucona wartość, to test jest zdany.
 
 Dodatkowo każdy z bohaterów posiada:
 \begin{description}
@@ -36,6 +34,11 @@ Dodatkowo każdy z bohaterów posiada:
  \item [Życie \abzyc] Standardowe punkty obrażeń, ile jest w stanie gracz znieść.
 \end{description}
 
+\section{Testy}
+Rzucając jedną \dxx liczymy odległość punktu naszego gracza od wierzchołka po trójkątnej kratce, jeśli jest mniejsza niż wyrzucona wartość, to test jest zdany.
+
+Mistrz gry może dodać utrudnienia i ułatwienia dla zdawalności testu pod postacią dodatkowych, lub ujemnych punktów do wyniku na kostce.
+Dodanie punktów do wyniku na kostce zwiększa trudność wyrzucenia mniejszej wartości od odległość na krysztale osobowości, a odjęcie ułatwia.
 
 \section{Życie}
 Ilość punktów życia gracza zależy od jego siły i jest równa $20 - \abs$.
@@ -46,7 +49,7 @@ Jednak spadek poniżej zera powoduje rany krytyczne.
 Każda kolejna rana krytyczna powoduje w kolejności:
 \begin{enumerate}
 \item Problem psychiczny
-\item Korupcja kryształu umiejętności.
+\item Korupcja kryształu osobowości.
 \end{enumerate}
 
 \section{Korupcja}
@@ -70,19 +73,35 @@ Chipy dzielą się na aktywne i pasywne.
 Aktywne dają dodatkowe zdolności, jak umiejętność odbioru fal radiowych, lutownice w palcach, czy noktowizor w oczach.
 Przed użyciem chipu należy przejść test \abnkp, czyli wyrzucić za pomocą \dxx więcej, niż wartość \abnkp. 
 Niezdanie testu \abnkp powoduje widowiskowe uszkodzenie chipu z różnymi dziwacznymi skutkami.
-Każdy chip związany jest także z pewną cechą, której to test trzeba zdać przed użyciem chipu, jeśli nasza \abnkp nie jest za wysoka.
+Każdy chip związany jest także z pewną cechą, której to test trzeba zdać przed użyciem chipu..
 Każdy zamontowany chip dodaje pewną ilość \abnkp dla gracza.
-Chipy montują się automatycznie po zakupieniu, lub znalezieniu.
 
-Chipy pasywne mogą obciągać wierzchołki kryształu umiejętności, rysujemy wtedy kwadrat wokół odpowiedniego wierzchołka i liczymy drogę tylko do granicy.
+Chipy pasywne mogą obciągać wierzchołki kryształu osobowości, rysujemy wtedy kwadrat wokół odpowiedniego wierzchołka i liczymy drogę tylko do granicy.
 W ten sposób ułatwiamy sobie zdawanie testów danej cechy.
 Chipy pasywne także nie uszkadzają się i nie trzeba dla nich zdawać testów \abnkp, jednakże cena za ich zamontowanie często jest bardzo wysoka i mocno zwiększa ilość \abnkp.
-Te chipy nie montują się same, potrzeba operacji chirurgicznej, aby odpowiednio móc korzystać z jego dobrodziejstw.
+
+Różne chipy dają różnie przydatne zdolności, niektóre mogą montować się automatycznie włażąc w ciało.
+Inne mogą potrzebować operacji chirurgicznej, aby odpowiednio móc korzystać z jego dobrodziejstw.
 Operacja może pójść w różny sposób, nieudana w pełni może wpłynąć tymczasowo na \abzyc, zmniejszyć moc chipu, albo zwiększyć nadmiernie \abnkp.
 
 \section{Uszkodzenia chipu}
+Przy nie zdaniu \abnkp chip może się uszkodzić na jeden ze sposobów, charakterystyczny dla każdego chipu.
+Rzucamy wtedy \dxx i sprawdzamy swój wynik w tabeli pod informacjami o chipie.
+
+Zazwyczaj jest to zaprzestanie działania, ale może on także zacząć wyprawiać dziwne rzeczy.
+Możliwe, że zwiększy, lub zmniejszy się jego czułość.
+Może dodać się szum, lub błędy losowane przez Mistrza Gry.
+Czasem inne chipy mogą wpływać na używanie zepsutego.
+
+Uszkodzenia mogą być tymczasowe na jedną, lub więcej tur --- w przyszłości na pewno będą istnieć samonaprawiające się układy cyfrowe, lub permanentne --- naprawiane na różne inne sposoby.
 
 \section{Moc}
+Każdy gracz posiada jedną supermoc.
+Jest to światłograf podpisany z Bogiem, który wymaga od gracza działania w kierunku większego dobra i aktywnego zwalczania zła przy pomocy nabytej umiejętności.
+
+%cechy mocy
+%trójkąt mocy
+%kartridże
 %rozwinięcie mocy
 \section{Mutacje}
 
@@ -91,8 +110,9 @@ Operacja może pójść w różny sposób, nieudana w pełni może wpłynąć ty
 \section{Przedmioty}
 %automatyczne ładowniki itp.
 \section{Wiedza}
-
+%zdobyte umiejęctności zwiększające zdanie testu
 \section{Problem Psychiczny}
+%ma problemy prychiczne w stresie, może je też dostawać
 
 
 
