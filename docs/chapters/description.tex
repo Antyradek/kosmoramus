@@ -33,6 +33,7 @@ Dodatkowo każdy z bohaterów posiada:
  \item [Wskaźnik niekompatybilności \abnkp] Jak bardzo ciało gracza jest niespójne ze sobą. Chipy i mutacje obniżają \abnkp w różny sposób. Rasowo czyste istoty mają zerową \abnkp.
  \item [Życie \abzyc] Standardowe punkty obrażeń, ile jest w stanie gracz znieść.
  \item [Wskaźnik grzechu \abgrz] Za złe uczynki, które nie są konieczne do wykonania misji zwiększa się tą ilość. Gdy osiągnie 100 następuje grzech śmiertelny.
+ \item [Kartridże mocy \abkar] Użycie mocy zużywa jeden kartridż. Maksymalna ilość może być rozwijana i początkowo wynosi 5.
 \end{description}
 
 \section{Testy}
@@ -101,11 +102,69 @@ Uszkodzenia mogą być tymczasowe na jedną, lub więcej tur --- w przyszłości
 Każdy gracz posiada jedną supermoc.
 Jest to światłograf podpisany z Bogiem, który wymaga od gracza działania w kierunku większego dobra i aktywnego zwalczania zła przy pomocy nabytej umiejętności.
 
-%cechy mocy
-%trójkąt mocy
-%kartridże
-%rozwinięcie mocy
-%korupcja mocy
+\subsection{Smak mocy}
+Moc może być użyta na trzy sposoby:
+\begin{itemize}
+ \item Siła Mocy \absm --- jest to siłowe użycie mocy. Zazwyczaj najprostsze, zależy od mocy jaką posiada bohater. Na przykład moce lecznicze uleczą, a fala uderzeniowa zburzy.
+ \item Dokładność Mocy \absm --- użycie swojej mocy w specyficzny sposób chcąc uzyskać niestandardowy efekt. Przykładowo wyleczenie, czy nawet celowe uszkodzenie jakiejś części ciała. Wybicie za pomocą fali określonego kształtu w strukturze.
+ \item Reakcja Mocy \absm --- dodatkowy zmysł. Zdajesz ten test, gdy chcesz coś wyczuć, sprawdzić reakcję i podobne. Lekarz będzie mógł wykryć chorobę bez leczenia jej, a fala uderzeniowa zadziała, jak sonar.
+\end{itemize}
+
+Zapis współczynników mocy i testy przeprowadzane są w identyczny sposób, co na krysztale osobowości.
+Tutaj mamy trzy smaki rozmieszczone na kątach trójkąta równobocznego o boku 20, trójkątna kratka pozwala liczyć odległości punktu mocy od kątów.
+Nazywa się to trójkątem mocy.
+
+W przeciwieństwie do kryształu, odległości na nim początkowo są dość duże powodując, że używanie mocy jest bardzo trudne.
+Jednak daje to szerokie pole do późniejszego rozwoju.
+
+\subsection{Kartridże}
+Nie można sobie używać mocy dowolnie, jak się chce.
+Gracz ma określoną ilość kartridży, użycie mocy zużywa jeden z nich.
+Te wkłady odnawiają się natychmiastowo w zamian za dobre uczynki, oraz po jednym na godzinę snu.
+
+Jeśli używając mocy nie uda ci się wyrzucić dostatecznie dużej wartości, następuje spalenie kartridża.
+Może to powodować różne dziwne zachowania, niekoniecznie złe.
+Możesz dostać korupcję, szynę, obciągnięcie wierzchołka, darmowe \xpmcn, lub inne dziwaczne zdarzenia. 
+W większości przypadków nic się nie dzieje.
+
+\subsection{Rozwój mocy}
+Każdy smak mocy może być rozwijany osobno.
+Każdy smak posiada szereg cech, które są rozwijane w zamian za punkty Mocności \xpmcn.
+Cechy odpowiadają na przykład za maksymalny zasięg mocy, siłę, właściwości i rozmiar generowanych przedmiotów itp.
+W zależności od cechy można zużyć różną ilość \xpmcn na jej rozwinięcie.
+
+Można także obciągnąć wierzchołek trójkąta mocy w zamian za ilość \xpmcn równą odległości od niego. 
+Inaczej za każde obciągnięcie będziemy płacić coraz więcej \xpmcn: 1,2,3,4...
+
+\subsection{Korupcja trójkąta}
+Podobnie do kryształu, tutaj także może wystąpić korupcja.
+Przejście przez zaznaczony obszar także liczy się podwójnie.
+\begin{enumerate}
+ \item Wybierz wierzchołek najbliżej swojego punktu mocy.
+ \item Wybierz krawędź od tego wierzchołka najbliżej twojego punktu mocy.
+ \item Idź po krawędzi \dxx kratek.
+ \item Wybierz jeden z dwóch kierunków wgłąb trójkąta, ten który jest bliżej punktu mocy.
+ \item Idź wzdłuż tego kierunku \dxx[5] kratek odbijając się od krawędzi, jak laser od lustra.
+ \item W końcowym punkcie narysuj sześciokąt foremny o boku 2.
+\end{enumerate}
+
+\subsection{Szyna}
+Pomyśl o tym, jak o teleporterze z jednego punktu na trójkącie w drugi.
+Rysując jednokierunkowe łamane możesz stworzyć szybką drogę, która skróci liczoną odległość do wierzchołka.
+Wejść i wyjść w szynę możesz tylko na końcach.
+Poruszanie się po szynie nie zwiększa liczonej odległości od wierzchołka.
+Poruszać się można tylko w określonych kierunkach.
+Gdy szyny się przecinają (lub zapętlają) możesz wybrać dowolną drogę na skrzyżowaniu.
+Licząc drogę normalnie na zewnątrz nie możesz przekroczyć szyny.
+
+\begin{enumerate}
+ \item Aby stworzyć szynę wylosuj punkt na trójkącie w dokładnie taki sam sposób, jak dla korupcji.
+ \item Rzucając raz po raz \dvi wybierasz jeden z kierunków na róży wiatrów. 
+ \item Rysujesz szynę w kierunku wylosowanego kierunku i zaznaczasz strzałką kierunek w którym się ruszyłeś.
+ \item Powtarzasz rzucanie kostką i rysowanie aż nie wyjdziesz poza trójkąt, lub nie wylosujesz kierunku z powrotem z którego przyszedłeś, lub już istniejącego na szynie. Tzn, gdy nie będziesz mógł wykonać następnego ruchu, lub nic on nie zmieni.
+ \item Przecinania obecnie tworzonej szyny i poprzednich są dozwolone.
+\end{enumerate}
+
 \section{Mutacje}
 
 \section{Grzech}
