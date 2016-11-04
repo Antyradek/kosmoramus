@@ -1,2 +1,22 @@
 Wymagania dla kart:
 Na karcie trójkąta mocy narysować różę wiatrów oznaczoną liczbami od 1 do 6. Do rysowania szyny.
+Dodać listę urządzeń z polem cechy.
+Karty pamięci jako informacja dla Mistrza Gry o tym, jak losować zepsucia chipów.
+
+Co potrzeba na kartach:
+Współrzędne punktu osobowości.
+Niekompatybilność.
+Lista pasywności do urządzeń itp, pole aktywności.
+Życie, wzór i lista modyfikatorów.
+Grzech od 0 do 100.
+Kartridże i lista modyfikatorów.
+Lista chipów pasywnych. Opis, koszt.
+Lista chipów aktywnych. Opis, cecha, koszt, opis aktualnego zepsucia.
+Opis mocy, każdego ze smaków.
+Współrzędne trójkąta mocy.
+Aktualne współczynniki dla każdego ze smaków mocy i cena za rozwinięcie.
+Lista mutacji, ilość niekompatybilności, ewentualna cecha.
+Lista broni, wielkość magazynka, wkłady, opis, sposób przeładowania, cecha, niezdanie testu.
+Lista przedmiotów, ilość.
+Lista urządzeń, cecha, opis.
+Wiedza, cecha.

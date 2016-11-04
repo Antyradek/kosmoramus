@@ -2,7 +2,7 @@
 \section{Cechy gracza}
 \kosmoramus to gra fabularna. Są w niej gracze a nad wszystkim czuwa Mistrz Gry.
 
-Gracz posiada 6 cech podstawowych za pomocą których wykonuje testy na umiejętności i używanie broni.
+Gracz posiada 6 cech podstawowych za pomocą których wykonuje testy na umiejętności, używanie broni, urządzeń, czy wiedzy.
 Cechy są modyfikowane przez chipy i różne inne dodatki.
 \begin{description}
  \item[Siła \abs] Siła decyduje o tym jak silny i potężny jest gracz.
@@ -28,9 +28,10 @@ Najprościej jest zaprezentować zdolności gracza na wierzchołkach ośmiościa
  \item Na każdym boku jest siatka z trójkątów po której gracz liczy test cechy.
 \end{itemize}
 
+%TODO co jak NKP będzie większa od 20? Nie można pozwolić mutować w nieskończoność.
 Dodatkowo każdy z bohaterów posiada:
 \begin{description}
- \item [Wskaźnik niekompatybilności \abnkp] Jak bardzo ciało gracza jest niespójne ze sobą. Chipy i mutacje obniżają \abnkp w różny sposób. Rasowo czyste istoty mają zerową \abnkp.
+ \item [Wskaźnik niekompatybilności \abnkp] Jak bardzo ciało gracza jest niespójne ze sobą. Chipy i mutacje zwiększają \abnkp w różny sposób. Rasowo czyste istoty mają zerową \abnkp.
  \item [Życie \abzyc] Standardowe punkty obrażeń, ile jest w stanie gracz znieść.
  \item [Wskaźnik grzechu \abgrz] Za złe uczynki, które nie są konieczne do wykonania misji zwiększa się tą ilość. Gdy osiągnie 100 następuje grzech śmiertelny.
  \item [Kartridże mocy \abkar] Użycie mocy zużywa jeden kartridż. Maksymalna ilość może być rozwijana i początkowo wynosi 5.
@@ -76,11 +77,12 @@ Chipy dzielą się na aktywne i pasywne.
 Aktywne dają dodatkowe zdolności, jak umiejętność odbioru fal radiowych, lutownice w palcach, czy noktowizor w oczach.
 Przed użyciem chipu należy przejść test \abnkp, czyli wyrzucić za pomocą \dxx więcej, niż wartość \abnkp. 
 Niezdanie testu \abnkp powoduje widowiskowe uszkodzenie chipu z różnymi dziwacznymi skutkami.
-Każdy chip związany jest także z pewną cechą, której to test trzeba zdać przed użyciem chipu..
+Każdy chip związany jest także z pewną cechą, której to test trzeba zdać przed użyciem chipu.
 Każdy zamontowany chip dodaje pewną ilość \abnkp dla gracza.
 
 Chipy pasywne mogą obciągać wierzchołki kryształu osobowości, rysujemy wtedy kwadrat wokół odpowiedniego wierzchołka i liczymy drogę tylko do granicy.
 W ten sposób ułatwiamy sobie zdawanie testów danej cechy.
+Mogą także przestawiać nasz punkt osobowości w dowolnym kierunku.
 Chipy pasywne także nie uszkadzają się i nie trzeba dla nich zdawać testów \abnkp, jednakże cena za ich zamontowanie często jest bardzo wysoka i mocno zwiększa ilość \abnkp.
 
 Różne chipy dają różnie przydatne zdolności, niektóre mogą montować się automatycznie włażąc w ciało.
@@ -166,17 +168,63 @@ Licząc drogę normalnie na zewnątrz nie możesz przekroczyć szyny.
 \end{enumerate}
 
 \section{Mutacje}
+Mutacja może być niewidoczna, lub zmieniać jakąś część ciała.
+Może dodawać cech przez obciąganie wierzchołków, lub nawet odejmować.
+Być może da nowe zdolności.
+Czasami trzeba będzie wykonać test cechy, na przykład aby użyć pazurów.
+
+Jednak każda mutacja dodaje jakąś ilość \abnkp do gracza.
+To oznacza, że silnie zmutowana osoba będzie miała problem z używaniem swoich chipów.
 
 \section{Grzech}
-%grzech śmiertelny
-%losowanie efektu jak korupcja (mocy), spadek osobowości, dodatkowy problem fizyczny, blizny
+Gracze są wysłannikami Boga, aby naprawiali zepsuty wszechświat.
+Ze względu na wykonywany zawód i tak pozwala się im na wiele i wybacza prawie wszystko.
+Za nieograniczone używanie mocy płaci się powinnością dążenia do większego dobra.
+
+To Mistrz Gry decyduje ile \abgrz dodać za niewłaściwie wykonaną akcję.
+Grzech dostaje się za zabicie kogoś, jeśli nie potrzeba było, zdradę, kłamstwo dla własnego zysku itp.
+Niektóre rzeczy wydają się złe obecnie, ale wykonane zostały ku większemu dobru. Za takie nie wolno karać.
+
+Gdy licznik \abgrz osiągnie wartość 100 nastąpi grzech śmiertelny, czyli kara za niewłaściwe życie.
+Losujesz wtedy jeden z grzechów śmiertelnych rzucając \dxx i resetujesz licznik.
 
 \section{Broń}
-%wkłady 
+Większość gier fabularnych dokładnie definiuje umiejętności, zasięg i obrażenia broni.
+To jednak katastrofalnie ogranicza kreatywność Mistrza Gry przy wymyślaniu nowych urządzeń.
+No bo jak w takim systemie zaimplementować rzodkiewkowe działo, które zamienia jakąś część ciała w rzodkiewkę wypuszczając następnie z klatki stado głodnych wegan?
+
+Każda broń ma pewien magazynek.
+Jego wielkość zależy od typu broni i powinien być jak najmniejszy przy silniejszych broniach.
+Także ładowanie może być szybkie, lub nawet zużywać jedną turę na jeden nabój.
+Może potrzeba będzie najpierw wyciągnąć zużyty wkład?
+A co gdyby to kilka osób było potrzebne do wymiany?
+Lub gdyby urządzenie zużywało jednocześnie dwa rodzaje naboi?
+
+Każda broń jest powiązana z którąś z 6 cech na krysztale osobowości.
+Aby poprawnie użyć broni trzeba zdać test tej cechy.
+Dobrze jeśli cecha jest powiązana z rodzajem broni, na przykład obsługa działa wywracającego skórę na lewą stronę wymaga sporo odwagi i \abh.
+A z kolei aparat fotograficzny pożerający duszę potrzebuje dobrego kadrowania i zdania \abp.
+Niezdanie cechy także może prowadzić do zachowań charakterystycznych dla broni.
+Nie zawsze nabój będzie do wymiany i nie zawsze zachowasz tyle samo życia.
+
 \section{Przedmioty}
-%automatyczne ładowniki itp.
+W ekwipunku można posiadać rozmaitą ilość przedmiotów.
+Mogą być one dowolnie użyte i nie trzeba zdawać dodatkowych testów, jak przy broni, czy chipach.
+Jednak prawdopodobnie trzeba będzie zdać test aby określić czy akcja z użyciem przedmiotu się udała.
+
+\section{Urządzenia}
+Podobnie do broni wymagają zdania testu cechy.
+Urządzeniami mogą być automatyczne skraplacze wody, latające kamery, czy nabijacze do wkładów.
+Jak zawsze zasady mogą być specjalnie nadpisane dla określonego urządzenia.
+
+Na przykład urządzenie pracuje, ale ma jakieś tam prawdopodobieństwo zacięcia się w każdym ruchu, wtedy potrzebny jest test cechy aby naprawić --- przykładem mogą być automatyczne ładowniki do broni.
+Wszystkie zachowania pasywne należy dopisać do listy pasywności i testować w każdym ruchu.
+
 \section{Wiedza}
-%zdobyte umiejęctności zwiększające zdanie testu
+Nabyta wiedza pozwala wykonywać nowe i ciekawe czynności lepiej i bez utrudnień.
+Każda wiedza opiera się o test cechy, który musi być zdany aby użyć wiedzy.
+Przykładowe wiedze, to elektronika, naprawa statków kosmicznych, biologia smoków określonego gatunku, czy aktorstwo.
+
 \section{Problem Psychiczny}
 %ma problemy prychiczne w stresie, może je też dostawać
 \section{Uszkodzenia ciała}
