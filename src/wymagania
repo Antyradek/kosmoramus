@@ -6,9 +6,8 @@ Karty pamięci jako informacja dla Mistrza Gry o tym, jak losować zepsucia chip
 Co potrzeba na kartach:
 Współrzędne punktu osobowości.
 Niekompatybilność.
-Lista pasywności do urządzeń itp, pole aktywności.
 Życie, wzór i lista modyfikatorów.
-Grzech od 0 do 100.
+Grzech od 0 do 50.
 Kartridże i lista modyfikatorów.
 Lista chipów pasywnych. Opis, koszt.
 Lista chipów aktywnych. Opis, cecha, koszt, opis aktualnego zepsucia.
@@ -20,3 +19,6 @@ Lista broni, wielkość magazynka, wkłady, opis, sposób przeładowania, cecha,
 Lista przedmiotów, ilość.
 Lista urządzeń, cecha, opis.
 Wiedza, cecha.
+Problem psychiczny.
+Lista uszkodzeń ciała.
+Lista pasywna.
