@@ -1,24 +1,24 @@
 \chapter{Opis gracza}
 \section{Cechy gracza}
-\kosmoramus to gra fabularna. Są w niej gracze a nad wszystkim czuwa Mistrz Gry.
+\kosmoramus{} to gra fabularna. Są w niej gracze a nad wszystkim czuwa Mistrz Gry.
 
 Gracz posiada 6 cech podstawowych za pomocą których wykonuje testy na umiejętności, używanie broni, urządzeń, czy wiedzy.
 Cechy są modyfikowane przez chipy i różne inne dodatki.
 \begin{description}
- \item[Siła \abs] Siła decyduje o tym jak silny i potężny jest gracz.
- \item[Inteligencja \abi] Jak bardzo udaje mu się rozwiązywać problemy i co potrafi wymyślić.
- \item[Chamstwo \abh] Odwaga, bezwzględność i odporność. Chamski gracz ma wysoką siłę woli.
- \item[Towarzyskość \abt] Altruizm, rozmowy z innymi, dar przekonywania. Towarzyskie osoby mogą dobrze zarządzać innymi i organizować.
- \item[Atletyzm \aba] Skoczność, gibkość i unik. Atleci potrafią robić wspaniałe rzeczy, ale przez bardzo krótki okres czasu.
- \item[Percepcja \abp] Gracze z wysoką percepcją widzą więcej i mogą się skupić. Potrzebna ona jest do dokładnego, acz wolnego sterowania.
+ \item[Siła \abs{}] Siła decyduje o tym jak silny i potężny jest gracz.
+ \item[Inteligencja \abi{}] Jak bardzo udaje mu się rozwiązywać problemy i co potrafi wymyślić.
+ \item[Chamstwo \abh{}] Odwaga, bezwzględność i odporność. Chamski gracz ma wysoką siłę woli.
+ \item[Towarzyskość \abt{}] Altruizm, rozmowy z innymi, dar przekonywania. Towarzyskie osoby mogą dobrze zarządzać innymi i organizować.
+ \item[Atletyzm \aba{}] Skoczność, gibkość i unik. Atleci potrafią robić wspaniałe rzeczy, ale przez bardzo krótki okres czasu.
+ \item[Percepcja \abp{}] Gracze z wysoką percepcją widzą więcej i mogą się skupić. Potrzebna ona jest do dokładnego, acz wolnego sterowania.
 \end{description}
 
 Każda cecha odpowiada określonemu typowi człowieka.
 Zatem są one przeciwstawne parami, rozwijanie jednej cechy jest kosztem naprzeciwległej.
 \begin{itemize}
- \item \abs jest naprzeciwko \abi.
- \item \abh jest naprzeciwko \abt.
- \item \aba jest naprzeciwko \abp.
+ \item \abs{} jest naprzeciwko \abi{}.
+ \item \abh{} jest naprzeciwko \abt{}.
+ \item \aba{} jest naprzeciwko \abp{}.
 \end{itemize}
 
 Najprościej jest zaprezentować zdolności gracza na wierzchołkach ośmiościanu foremnego zwanego kryształem osobowości:
@@ -31,14 +31,14 @@ Najprościej jest zaprezentować zdolności gracza na wierzchołkach ośmiościa
 %TODO co jak NKP będzie większa od 20? Nie można pozwolić mutować w nieskończoność.
 Dodatkowo każdy z bohaterów posiada:
 \begin{description}
- \item [Wskaźnik niekompatybilności \abnkp] Jak bardzo ciało gracza jest niespójne ze sobą. Chipy i mutacje zwiększają \abnkp w różny sposób. Rasowo czyste istoty mają zerową \abnkp.
- \item [Życie \abzyc] Standardowe punkty obrażeń, ile jest w stanie gracz znieść.
- \item [Wskaźnik grzechu \abgrz] Za złe uczynki, które nie są konieczne do wykonania misji zwiększa się tą ilość. Gdy osiągnie 100 następuje grzech śmiertelny.
- \item [Kartridże mocy \abkar] Użycie mocy zużywa jeden kartridż. Maksymalna ilość może być rozwijana i początkowo wynosi 5.
+ \item [Wskaźnik niekompatybilności \abnkp{}] Jak bardzo ciało gracza jest niespójne ze sobą. Chipy i mutacje zwiększają \abnkp{} w różny sposób. Rasowo czyste istoty mają zerową \abnkp{}.
+ \item [Życie \abzyc{}] Standardowe punkty obrażeń, ile jest w stanie gracz znieść.
+ \item [Wskaźnik grzechu \abgrz{}] Za złe uczynki, które nie są konieczne do wykonania misji zwiększa się tą ilość. Gdy osiągnie 100 następuje grzech śmiertelny.
+ \item [Kartridże mocy \abkar{}] Użycie mocy zużywa jeden kartridż. Maksymalna ilość może być rozwijana i początkowo wynosi 5.
 \end{description}
 
 \section{Testy}
-Rzucając jedną \dxx liczymy odległość punktu naszego gracza od wierzchołka po trójkątnej kratce, jeśli jest mniejsza niż wyrzucona wartość, to test jest zdany.
+Rzucając jedną \dxx{} liczymy odległość punktu naszego gracza od wierzchołka po trójkątnej kratce, jeśli jest mniejsza niż wyrzucona wartość, to test jest zdany.
 
 Mistrz gry może dodać utrudnienia i ułatwienia dla zdawalności testu pod postacią dodatkowych, lub ujemnych punktów do wyniku na kostce.
 Dodanie punktów do wyniku na kostce zwiększa trudność wyrzucenia mniejszej wartości od odległość na krysztale osobowości, a odjęcie ułatwia.
@@ -63,9 +63,9 @@ Może się zdarzyć, że korupcja wpasuje się na wierzchołku, wtedy niestety k
 
 Aby policzyć korupcję:
 \begin{enumerate}
- \item Wybierz wierzchołek rzucając \dvi, ustaw go na górze.
- \item Idź w dół po krawędzi najbliższej do twojego punktu \dxx kratek.
- \item Idź w prawo \dxx[2] kratek.
+ \item Wybierz wierzchołek rzucając \dvi{}, ustaw go na górze.
+ \item Idź w dół po krawędzi najbliższej do twojego punktu \dxx{} kratek.
+ \item Idź w prawo \dxx[2]{} kratek.
  \item Zaciemnij wszystkie trójkąty w odległości 2 od wylosowanego punktu. Najczęściej jest to sześciokąt o boku 2, ale na wierzchołku będzie to kwadrat.
 \end{enumerate}
 Może się zdarzyć, że punkt gracza znajdzie się w zaciemnionym obszarze. 
@@ -75,23 +75,23 @@ Na szczęście cechy można modyfikować i w przyszłości uciec z utrudniające
 Chipy dzielą się na aktywne i pasywne.
 
 Aktywne dają dodatkowe zdolności, jak umiejętność odbioru fal radiowych, lutownice w palcach, czy noktowizor w oczach.
-Przed użyciem chipu należy przejść test \abnkp, czyli wyrzucić za pomocą \dxx więcej, niż wartość \abnkp. 
-Niezdanie testu \abnkp powoduje widowiskowe uszkodzenie chipu z różnymi dziwacznymi skutkami.
+Przed użyciem chipu należy przejść test \abnkp{}, czyli wyrzucić za pomocą \dxx{} więcej, niż wartość \abnkp{}. 
+Niezdanie testu \abnkp{} powoduje widowiskowe uszkodzenie chipu z różnymi dziwacznymi skutkami.
 Każdy chip związany jest także z pewną cechą, której to test trzeba zdać przed użyciem chipu.
-Każdy zamontowany chip dodaje pewną ilość \abnkp dla gracza.
+Każdy zamontowany chip dodaje pewną ilość \abnkp{} dla gracza.
 
 Chipy pasywne mogą obciągać wierzchołki kryształu osobowości, rysujemy wtedy kwadrat wokół odpowiedniego wierzchołka i liczymy drogę tylko do granicy.
 W ten sposób ułatwiamy sobie zdawanie testów danej cechy.
 Mogą także przestawiać nasz punkt osobowości w dowolnym kierunku.
-Chipy pasywne także nie uszkadzają się i nie trzeba dla nich zdawać testów \abnkp, jednakże cena za ich zamontowanie często jest bardzo wysoka i mocno zwiększa ilość \abnkp.
+Chipy pasywne także nie uszkadzają się i nie trzeba dla nich zdawać testów \abnkp{}, jednakże cena za ich zamontowanie często jest bardzo wysoka i mocno zwiększa ilość \abnkp{}.
 
 Różne chipy dają różnie przydatne zdolności, niektóre mogą montować się automatycznie włażąc w ciało.
 Inne mogą potrzebować operacji chirurgicznej, aby odpowiednio móc korzystać z jego dobrodziejstw.
-Operacja może pójść w różny sposób, nieudana w pełni może wpłynąć tymczasowo na \abzyc, zmniejszyć moc chipu, albo zwiększyć nadmiernie \abnkp.
+Operacja może pójść w różny sposób, nieudana w pełni może wpłynąć tymczasowo na \abzyc{}, zmniejszyć moc chipu, albo zwiększyć nadmiernie \abnkp{}.
 
 \section{Uszkodzenia chipu}
-Przy nie zdaniu \abnkp chip może się uszkodzić na jeden ze sposobów, charakterystyczny dla każdego chipu.
-Rzucamy wtedy \dxx i sprawdzamy swój wynik w tabeli pod informacjami o chipie.
+Przy nie zdaniu \abnkp{} chip może się uszkodzić na jeden ze sposobów, charakterystyczny dla każdego chipu.
+Rzucamy wtedy \dxx{} i sprawdzamy swój wynik w tabeli pod informacjami o chipie.
 
 Zazwyczaj jest to zaprzestanie działania, ale może on także zacząć wyprawiać dziwne rzeczy.
 Możliwe, że zwiększy, lub zmniejszy się jego czułość.
@@ -107,9 +107,9 @@ Jest to światłograf podpisany z Bogiem, który wymaga od gracza działania w k
 \subsection{Smak mocy}
 Moc może być użyta na trzy sposoby:
 \begin{itemize}
- \item Siła Mocy \absm --- jest to siłowe użycie mocy. Zazwyczaj najprostsze, zależy od mocy jaką posiada bohater. Na przykład moce lecznicze uleczą, a fala uderzeniowa zburzy.
- \item Dokładność Mocy \abdm --- użycie swojej mocy w specyficzny sposób chcąc uzyskać niestandardowy efekt. Przykładowo wyleczenie, czy nawet celowe uszkodzenie jakiejś części ciała. Wybicie za pomocą fali określonego kształtu w strukturze.
- \item Reakcja Mocy \abrm --- dodatkowy zmysł. Zdajesz ten test, gdy chcesz coś wyczuć, sprawdzić reakcję i podobne. Lekarz będzie mógł wykryć chorobę bez leczenia jej, a fala uderzeniowa zadziała, jak sonar.
+ \item Siła Mocy \absm{} --- jest to siłowe użycie mocy. Zazwyczaj najprostsze, zależy od mocy jaką posiada bohater. Na przykład moce lecznicze uleczą, a fala uderzeniowa zburzy.
+ \item Dokładność Mocy \abdm{} --- użycie swojej mocy w specyficzny sposób chcąc uzyskać niestandardowy efekt. Przykładowo wyleczenie, czy nawet celowe uszkodzenie jakiejś części ciała. Wybicie za pomocą fali określonego kształtu w strukturze.
+ \item Reakcja Mocy \abrm{} --- dodatkowy zmysł. Zdajesz ten test, gdy chcesz coś wyczuć, sprawdzić reakcję i podobne. Lekarz będzie mógł wykryć chorobę bez leczenia jej, a fala uderzeniowa zadziała, jak sonar.
 \end{itemize}
 
 Zapis współczynników mocy i testy przeprowadzane są w identyczny sposób, co na krysztale osobowości.
@@ -126,17 +126,17 @@ Te wkłady odnawiają się natychmiastowo w zamian za dobre uczynki, oraz po jed
 
 Jeśli używając mocy nie uda ci się wyrzucić dostatecznie dużej wartości, następuje spalenie kartridża.
 Może to powodować różne dziwne zachowania, niekoniecznie złe.
-Możesz dostać korupcję, szynę, obciągnięcie wierzchołka, darmowe \xpmcn, lub inne dziwaczne zdarzenia. 
+Możesz dostać korupcję, szynę, obciągnięcie wierzchołka, darmowe \xpmcn{}, lub inne dziwaczne zdarzenia. 
 W większości przypadków nic się nie dzieje.
 
 \subsection{Rozwój mocy}
 Każdy smak mocy może być rozwijany osobno.
-Każdy smak posiada szereg cech, które są rozwijane w zamian za punkty mocności \xpmcn.
+Każdy smak posiada szereg cech, które są rozwijane w zamian za punkty mocności \xpmcn{}.
 Cechy odpowiadają na przykład za maksymalny zasięg mocy, siłę, właściwości i rozmiar generowanych przedmiotów itp.
-W zależności od cechy można zużyć różną ilość \xpmcn na jej rozwinięcie.
+W zależności od cechy można zużyć różną ilość \xpmcn{} na jej rozwinięcie.
 
-Można także obciągnąć wierzchołek trójkąta mocy w zamian za ilość \xpmcn równą odległości od niego. 
-Inaczej za każde obciągnięcie będziemy płacić coraz więcej \xpmcn: 1,2,3,4...
+Można także obciągnąć wierzchołek trójkąta mocy w zamian za ilość \xpmcn{} równą odległości od niego. 
+Inaczej za każde obciągnięcie będziemy płacić coraz więcej \xpmcn{}: 1,2,3,4...
 
 \subsection{Korupcja trójkąta}
 Podobnie do kryształu, tutaj także może wystąpić korupcja.
@@ -144,12 +144,12 @@ Przejście przez zaznaczony obszar także liczy się podwójnie.
 \begin{enumerate}
  \item Wybierz wierzchołek najbliżej swojego punktu mocy.
  \item Wybierz krawędź od tego wierzchołka najbliżej twojego punktu mocy.
- \item Idź po krawędzi \dxx kratek.
+ \item Idź po krawędzi \dxx{} kratek.
  \item Wybierz jeden z dwóch kierunków wgłąb trójkąta, ten który jest bliżej punktu mocy.
- \item Idź wzdłuż tego kierunku \dxx[5] kratek odbijając się od krawędzi, jak laser od lustra.
+ \item Idź wzdłuż tego kierunku \dxx[5]{} kratek odbijając się od krawędzi, jak laser od lustra.
  \item W końcowym punkcie narysuj sześciokąt foremny o boku 2.
 \end{enumerate}
-Identycznie działa antykorupcja, gdzie wymazujesz wylosowany obszar. Możesz ją sobie kupić za 20 \xpmcn.
+Identycznie działa antykorupcja, gdzie wymazujesz wylosowany obszar. Możesz ją sobie kupić za 20 \xpmcn{}.
 
 \subsection{Szyna}
 Pomyśl o tym, jak o teleporterze z jednego punktu na trójkącie w drugi.
@@ -162,7 +162,7 @@ Licząc drogę normalnie na zewnątrz nie możesz przekroczyć szyny.
 
 \begin{enumerate}
  \item Aby stworzyć szynę wylosuj punkt na trójkącie w dokładnie taki sam sposób, jak dla korupcji.
- \item Rzucając raz po raz \dvi wybierasz jeden z kierunków na róży wiatrów. 
+ \item Rzucając raz po raz \dvi{} wybierasz jeden z kierunków na róży wiatrów. 
  \item Rysujesz szynę w kierunku wylosowanego kierunku i zaznaczasz strzałką kierunek w którym się ruszyłeś.
  \item Powtarzasz rzucanie kostką i rysowanie aż nie wyjdziesz poza trójkąt, lub nie wylosujesz kierunku z powrotem z którego przyszedłeś, lub już istniejącego na szynie. Tzn, gdy nie będziesz mógł wykonać następnego ruchu, lub nic on nie zmieni.
  \item Przecinania obecnie tworzonej szyny i poprzednich są dozwolone.
@@ -174,7 +174,7 @@ Może dodawać cech przez obciąganie wierzchołków, lub nawet odejmować.
 Być może da nowe zdolności.
 Czasami trzeba będzie wykonać test cechy, na przykład aby użyć pazurów.
 
-Jednak każda mutacja dodaje jakąś ilość \abnkp do gracza.
+Jednak każda mutacja dodaje jakąś ilość \abnkp{} do gracza.
 To oznacza, że silnie zmutowana osoba będzie miała problem z używaniem swoich chipów.
 
 \section{Grzech}
@@ -182,12 +182,12 @@ Gracze są wysłannikami Boga, aby naprawiali zepsuty wszechświat.
 Ze względu na wykonywany zawód i tak pozwala się im na wiele i wybacza prawie wszystko.
 Za nieograniczone używanie mocy płaci się powinnością dążenia do większego dobra.
 
-To Mistrz Gry decyduje ile \abgrz dodać za niewłaściwie wykonaną akcję.
+To Mistrz Gry decyduje ile \abgrz{} dodać za niewłaściwie wykonaną akcję.
 Grzech dostaje się za zabicie kogoś, jeśli nie potrzeba było, zdradę, kłamstwo dla własnego zysku itp.
 Niektóre rzeczy wydają się złe obecnie, ale wykonane zostały ku większemu dobru. Za takie nie wolno karać.
 
-Gdy licznik \abgrz osiągnie wartość 100 nastąpi grzech śmiertelny, czyli kara za niewłaściwe życie.
-Losujesz wtedy jeden z grzechów śmiertelnych rzucając \dxx i resetujesz licznik.
+Gdy licznik \abgrz{} osiągnie wartość 100 nastąpi grzech śmiertelny, czyli kara za niewłaściwe życie.
+Losujesz wtedy jeden z grzechów śmiertelnych rzucając \dxx{} i resetujesz licznik.
 
 \section{Broń}
 Większość gier fabularnych dokładnie definiuje umiejętności, zasięg i obrażenia broni.
@@ -203,12 +203,12 @@ Lub gdyby urządzenie zużywało jednocześnie dwa rodzaje naboi?
 
 Każda broń jest powiązana z którąś z 6 cech na krysztale osobowości.
 Aby poprawnie użyć broni trzeba zdać test tej cechy.
-Dobrze jeśli cecha jest powiązana z rodzajem broni, na przykład obsługa działa wywracającego skórę na lewą stronę wymaga sporo odwagi i \abh.
-A z kolei aparat fotograficzny pożerający duszę potrzebuje dobrego kadrowania i zdania \abp.
+Dobrze jeśli cecha jest powiązana z rodzajem broni, na przykład obsługa działa wywracającego skórę na lewą stronę wymaga sporo odwagi i \abh{}.
+A z kolei aparat fotograficzny pożerający duszę potrzebuje dobrego kadrowania i zdania \abp{}.
 Niezdanie cechy także może prowadzić do zachowań charakterystycznych dla broni.
 Nie zawsze nabój będzie do wymiany i nie zawsze zachowasz tyle samo życia.
 
-Jeśli nie uda ci się zdać testu cechy, rzucasz \dxx i sprawdzasz na liście dołączonej do broni co nieciekawego cię czeka.
+Jeśli nie uda ci się zdać testu cechy, rzucasz \dxx{} i sprawdzasz na liście dołączonej do broni co nieciekawego cię czeka.
 Zazwyczaj nie stanie się nic, ale to wszystko zależy od broni.
 
 \section{Przedmioty}
@@ -239,7 +239,7 @@ Grzech, mutacje i spalenia mogą dodawać nowe problemy.
 Każdy problem ma jakieś natężenie maksymalne.
 
 Jeśli wystąpi problem psychiczny, losujesz go z listy swoich problemów i losujesz natężenie.
-Aby się wyleczyć musisz zdać test \abh.
+Aby się wyleczyć musisz zdać test \abh{}.
 
 \section{Uszkodzenia ciała}
 Tutaj idą wszystkie fizyczne uszkodzenia, jak blizny i choroby.
@@ -248,15 +248,15 @@ Za uszkodzenie uznajemy także wszystkie ozdoby, jak piercing i tatuaże.
 Nie wpływają one za bardzo na grę (no chyba, że stoisz przed wielkim elektromagnesem, albo lecą na ciebie zdalnie sterowane rakiety.
 
 Każde uszkodzenie ma swoje zasady wpływające na rozgrywkę.
-Mogą czasami zwiększać \abnkp.
+Mogą czasami zwiększać \abnkp{}.
 
 \section{Lista pasywna}
 Tutaj idą wszystkie pasywne zachowania uzyskane przez chipy pasywne, uszkodzenia, mutacje, urządzenia itp.
-Losujemy procenty za pomocą \dc i wykonujemy akcję, jeśli wartość jest mniejsza, niż ilość procent , wykonujemy akcję.
+Losujemy procenty za pomocą \dc{} i wykonujemy akcję, jeśli wartość jest mniejsza, niż ilość procent , wykonujemy akcję.
 Zawsze istnieją podstawowe akcje pasywne:
 \begin{description}
-\item[5\%] Wyleczenie rany, dodanie \abzyc jeśli mniejszy od maksimum.
-\item[10\%] Zakończenie ewentualnego problemu psychicznego bez testu \abh.
+\item[5\%] Wyleczenie rany, dodanie \abzyc{} jeśli mniejszy od maksimum.
+\item[10\%] Zakończenie ewentualnego problemu psychicznego bez testu \abh{}.
 \item[] Akcje każdego z urządzeń, jakie posiadasz.
 \end{description}
 
