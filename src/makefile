@@ -1,5 +1,5 @@
 INKSCAPE=inkscape
-PDFS=crystal other page1 page2 power
+PDFS=crystal page1 page2 power devices
 
 all: $(PDFS)
 
