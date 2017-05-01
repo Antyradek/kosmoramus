@@ -1,19 +1,202 @@
 \chapter{Przykłady}
 Przykładowe moce, chipy, urządzenia, itp.
 \kosmoramus{} jest grą o kreatywności, Mistrz Gry może specjalnie dla waszej sesji dodać sobie coś nowego.
-Nieznane jest fajne.
 
 Także są tutaj przykładowi gracze z których możecie sobie wybrać.
+
+\section{Moce}
+Zmienna $p$ jest obecnym poziomem cechy.
+
+\subsection{Łańcuch}
+Postać może wytworzyć i modyfikować łańcuch.
+Łańcuch ma określoną długość i wytrzymałość.
+W kilku turach można tworzyć bardzo długi łańcuch poprzez wytworzenie i połączenie fragmentów.
+Można go telepatycznie zniknąć.
+\begin{description}
+	\item[SM] Wytworzenie łańcucha o długości $l$ i wystrzelenie w powietrze z prędkością ruchu ręki (test \aba{}).
+	\item[DM] Ruszanie łańcuchem telepatycznie w odległości $d$, przerwanie go, modyfikowanie.
+	\item[RM] Wykrycie położenia i dotyku łańcucha.
+\end{description}
+\begin{itemize}
+	\item Długość wytworzonego łańcucha $l = 10p \ \si{\centi\metre}$
+	\item Wytrzymałość $F = 20p \ \si{\newton}$
+	\item Odległość $d = p \ \si{\metre}$
+\end{itemize}
+
+\subsection{Tarcza}
+Wytworzenie okrągłej tarczy o średnicy \SI{1}{\metre}.
+Można nią ruszać w granicach maksymalnej siły, przekroczenie natychmiast niszczy tarczę.
+Można telepatycznie zniknąć przed czasem.
+\begin{description}
+	\item[SM] Wytworzenie tarczy w odległości $d$ od siebie.
+	\item[DM] Ruch tarczą z siłą nie większą, niż $F$.
+	\item[RM] Wykrycie pozycji i dotyku na tarczy.
+\end{description}
+\begin{itemize}
+	\item Maksymalna siła $F = 10p \ \si{\newton}$
+	\item Czas zaniku $t = p \ \text{tur}$
+	\item Odległość $d = p \ \si{\metre}$
+\end{itemize}
+
+\subsection{Modyfikacja grawitacji}
+Gracz może nadać jakąś siłę w dowolnym kierunku dla pojedynczych obiektów.
+Pozwala to na rzucenie czegoś o ścianę, zmniejszenie ciężaru, a nawet latanie.
+Da się poruszać lekkimi przedmiotami w odległości \SI{1}{\metre}.
+Można wykryć prędkość poruszania się obiektu i jego pozycję.
+\begin{description}
+	\item[SM] Nadanie siły $F$ obiektowi przez określony czas $t$.
+	\item[DM] Telekineza w małej odległości.
+	\item[RM] Wykrycie prędkości, obrotu i pozycji obiektu.
+\end{description}
+\begin{itemize}
+	\item Siła $F = 10p \ \si{\newton}$
+	\item Kąt w stosunku do grawitacji $\alpha = 0,1\pi p \ \si{\radian}$
+	\item Czas działania $t = p \ \text{tur}$
+\end{itemize}
+
+\subsection{Frisbee}
+Postać wytwarza i rzuca okrągłe i płaskie pierścienie (jak frisbee) z ostrymi krawędziami.
+Średnica zewnętrzna nie może przekroczyć \SI{1}{\metre}, a wewnętrzna jest dowolna.
+Krawędzie nie tną stwórcy, ale zadają obrażenia wszystkim innym w wielkości $k$ \abzyc{}.
+Celność jest osiągana testem \aba{}.
+Na pierścienie nie działa grawitacja ale nie są w stanie utrzymać więcej, jak \SI{1000}{\newton} (jednego człowieka).
+Nie można ich obracać w innej płaszczyźnie, niż są obecnie.
+Nie można ich zniknąć, znikają same po 10 rundach.
+\begin{description}
+	\item[SM] Wytworzenie pierścienia i rzucenie nim z prędkością $v$.
+	\item[DM] Ruch pierścieniem w płaszczyźnie wytworzenia z maksymalną prędkością $v$, w odległości $d$.
+	\item[RM] Odczucie, co pierścień dotyka.
+\end{description}
+\begin{itemize}
+	\item Odległość sterowania $d = p \ \si{\metre}$
+	\item Prędkość wyrzutu $v = p \ \si{\metre\per\second}$
+	\item Ostrość $k = p \ \text{\abzyc{}}$
+\end{itemize}
+
+\subsection{Kolec}
+Gracz strzela kolcem.
+Na trafienie w cel wykonujemy test \aba{}, dodajemy $k$ do kostki o tyle ułatwiając sobie test.
+Postać czuje, gdy ktoś dotyka kolca.
+Może go telepatycznie zniknąć.
+\begin{description}
+	\item[SM] Wystrzelenie kolca odbierającego $k$ \abzyc{}, z prędkością $v$, wykonujemy test \aba{} dodając do kostki $c$.
+	\item[DM] Zniknięcie, nadanie siły testem \abs{}.
+	\item[RM] Odczucie pozycji kolca i czego dotyka.
+\end{description}
+\begin{itemize}
+	\item Prędkość strzału $v = p \ \si{\metre\per\second}$
+	\item Celność $c = p$
+	\item Ostrość $k = p \ \text{\abzyc{}}$
+\end{itemize}
+
+\subsection{Uderzenie}
+Gracz nadaje impuls tak silny, jak kopnięcie nogą.
+Może nim rzucić, zburzyć coś w odpowiednim kształcie i zbadać strukturę.
+\begin{description}
+	\item[SM] Impuls na stożku o kącie $\alpha$ i zasięgu $l$, w odległości $d$ od postaci.
+	\item[DM] Wytworzenie określonego kształtu impulsu przy dotyku ręką.
+	\item[RM] Dotknięcie i zbadanie struktury materiału.
+\end{description}
+\begin{itemize}
+	\item Kąt $\alpha = 0.2p\pi \ \si{\radian}$
+	\item Zasięg $l = 0.5p \ \si{\meter}$
+	\item Odległość $d = p \ \si{\meter}$
+\end{itemize}
+
+\subsection{Echo}
+Postać generuje fale ultrasoniczne dzięki którym widzi w ciemności, a także potrafi wprawić w wibracje jakiś obiekt.
+\begin{description}
+	\item[SM] Wprawienie w wibracje obiektu w zasięgu $d$, którego pozycja jest znana. Wykonaj test \aba{} i dodaj $c$ do kostki.
+	\item[DM] Dokładne poznanie kształtu obiektów w kuli o promieniu $r$, w zasięgu $d$.
+	\item[RM] Poznanie przybliżonego kształtu otoczenia w zasięgu $d$.
+\end{description}
+\begin{itemize}
+	\item Zasięg $d = p \ \si{\meter}$
+	\item Promień kuli $r = p \ \si{\centi\meter}$
+	\item Celność $c = p$
+\end{itemize}
+
+% elektrostatyka
+% leczenie
+
+\section{Przedmioty}
+\begin{description}
+	\item[Wkłady antymaterii] Podstawowe zasilanie broni i urządzeń.
+	\item[Wkłady do szyfratora] Jedyne i niepowtarzalne do jedynej i niepowtarzalnej broni.
+\end{description}
+
+\section{Bronie}
+Pif-paf, ziuu, (dźwięk zamarzającej czasoprzestrzeni).
+\subsection{Mostownik \abs{}}
+
+\begin{tabular}{lr}
+Wkłady & Antymateria \\
+Magazynek & 5 \\
+Załadowanie na turę & 1 \\
+\end{tabular}
+
+Wielka deska długości metra.
+Tworzy rzucane, paraboliczne mosty do celu.
+Most utrzymuje się w powietrzu zużywając jeden nabój na rundę.
+\begin{enumerate}
+	\item Most się tworzy, ale wije się w górę i w dół.
+	\item Most się tworzy, ale wije się na boki.
+	\item Most się tworzy, ale skręca się wzdłuż, jak wstążka.
+	\item Most się tworzy, ale w połowie się urywa.
+	\item Nic się nie dzieje.
+	\item Tworzą się jedynie fragmenty.
+	\item Tworzą się tylko granice, jak szyny. 
+	\item Most jest dziwnie lepki.
+	\item Most jest tak śliski, że nie da się go używać.
+	\item Most tworzy się w dziwnym kierunku \dii{}, czy przetnie strzelającego na pół.
+\end{enumerate}
+
+\subsection{Szyfrator \abt{}}
+
+\begin{tabular}{lr}
+Wkłady & Szyfrator \\
+Magazynek & 1 \\
+Załadowanie na turę & 0,5 \\
+\end{tabular}
+
+Najwspanialsze urządzenie inżynierii potworów.
+Podręczy pistolet, który zamraża wroga w czasie.
+Można go odmrozić tym samym wkładem.
+Działa to na zasadzie szyfrowania czasoprzestrzeni, klucz do odszyfrowania składowany jest w naboju.
+
+Zmiana naboju trwa dwie rundy, najpierw trzeba wyciągnąć stany i włożyć nowy.
+Wyrzucenie starego naboju wiąże się ze śmiercią zamrożonego (zostaje taki na zawsze) i dodaje 10 \abgrz{}.
+Strzelenie ponownie tym samym nabojem nadpisuje klucz i dodaje 10 \abgrz{}.
+Jeśli nie trafiło się w poprzedniej rundzie, można strzelać ponownie bez przeładowania.
+
+Przy niezdaniu testu cechy nie ma żadnych efektów ubocznych!
+
+\section{Chipy aktywne}
+Rurka do oddychania pod wodą wkręca mi się w głowę.
+
+\subsection{Ostrza z ręki \abh{}, 3 \abnkp{}}
+Trochę, jak Volverine, ale lepiej.
+Gracz wysuwa trzy krótkie kolce z przedramienia.
+\begin{enumerate}
+	\item Tym razem wysuwa ci się tylko środkowy.
+	\item Tym razem wysuwają ci się tylko boczne.
+	\item Środkowy kolec wypada na podłogę.
+	\item Środkowy kolec wystrzeliwywuje, \dii{} czy kogoś trafi.
+	\item Kolce przestają się wysuwać w ogóle.
+	\item Kolce przestają się chować w ogóle.
+	\item Wszystkie trzy kolce wystrzeliwywują we wszystkie strony.
+	\item Kolce wysuwają się w drugą stronę, w rękę, -5 \abzyc{}.
+	\item Zaczynają ciągle szybko wsuwać się i wysuwać.
+	\item Wysuwają się od teraz tylko do połowy.
+\end{enumerate}
+
+
+
 
 % typy graczy z zestawami cech, chipami, mocą itp 
 % Przykładowe chipy wraz z opisem uszkodzeń, efektów, cech
 
-% Przykładowe moce wraz z drzewem rozwoju
-
 % Przykładowe mutacje
-
-% Bronie
-	% Zachowanie na nieudane użycie
 
 % Przedmioty
 

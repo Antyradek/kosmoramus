@@ -4,3 +4,6 @@ Wszystko bardzo zmienne i niestałe.
 Do kompilacji użyj załączonego makefile.
 main.pdf jest gotowym rezultatem.
 Ze względu na wygenerowanie pliku spisu tereści, kompilacja może go nie zawierać za pierwszym razem. Usuń pdf i odpal ponownie.
+
+TODO:
+Światłografy, które dodają perki do mocy (przezroczyste kolce, kolczasty łańcuch, piła tarczowa na pierścieniu)

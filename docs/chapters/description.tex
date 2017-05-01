@@ -39,9 +39,10 @@ Dodatkowo każdy z bohaterów posiada:
 
 \section{Testy}
 Rzucając jedną \dxx{} liczymy odległość punktu naszego gracza od wierzchołka po trójkątnej kratce, jeśli jest mniejsza niż wyrzucona wartość, to test jest zdany.
+Należy wyrzucić więc jak największą wartość.
 
 Mistrz gry może dodać utrudnienia i ułatwienia dla zdawalności testu pod postacią dodatkowych, lub ujemnych punktów do wyniku na kostce.
-Dodanie punktów do wyniku na kostce zwiększa trudność wyrzucenia mniejszej wartości od odległość na krysztale osobowości, a odjęcie ułatwia.
+Dodanie punktów do wyniku na kostce zmniejsza trudność testu, a odjęcie zwiększa trudność.
 
 \section{Życie}
 Ilość punktów życia gracza zależy od jego siły i jest równa $20 - \abs$.
@@ -135,10 +136,11 @@ Możesz dostać korupcję, szynę, obciągnięcie wierzchołka, darmowe \xpmcn{}
 Każdy smak mocy może być rozwijany osobno.
 Każdy smak posiada szereg cech, które są rozwijane w zamian za punkty mocności \xpmcn{}.
 Cechy odpowiadają na przykład za maksymalny zasięg mocy, siłę, właściwości i rozmiar generowanych przedmiotów itp.
-W zależności od cechy można zużyć różną ilość \xpmcn{} na jej rozwinięcie.
+Rozwinięcie cechy mocy kosztuje dziesięciokrotność \xpmcn{} obecnego poziomu.
+Czyli przeskok z 1 na 2 kosztuje 10 \xpmcn{}, a z 2 na 3 już 20 \xpmcn{}.
 
 Można także obciągnąć wierzchołek trójkąta mocy w zamian za ilość \xpmcn{} równą odległości od niego. 
-Inaczej za każde obciągnięcie będziemy płacić coraz więcej \xpmcn{}: 1,2,3,4...
+Inaczej za każde obciągnięcie będziemy płacić coraz więcej \xpmcn{}: 10,20,30,40...
 
 \subsection{Korupcja trójkąta}
 Podobnie do kryształu, tutaj także może wystąpić korupcja.
