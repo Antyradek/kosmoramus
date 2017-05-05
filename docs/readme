@@ -6,4 +6,8 @@ main.pdf jest gotowym rezultatem.
 Ze względu na wygenerowanie pliku spisu tereści, kompilacja może go nie zawierać za pierwszym razem. Usuń pdf i odpal ponownie.
 
 TODO:
-Światłografy, które dodają perki do mocy (przezroczyste kolce, kolczasty łańcuch, piła tarczowa na pierścieniu)
+Światłografy, które dodają perki do mocy (świecące kolce, kolczasty łańcuch, piła tarczowa na pierścieniu)
+Podział na tabelę spaleń mechaniki i fabulanych
+Łączenia smaków mocy, po dwa na każdy bok trójkąta, dodać małe trójkąty o boku 5 do boku.
+Dodać tarcze, blokujące część ataku, blokujące wszystko kosztem wkładów.
+Dodać ilość obrażeń dla każdej broni.
