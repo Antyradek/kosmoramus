@@ -1,4 +1,4 @@
-\chapter{Opis gracza}
+\chapter{Mechanika}
 \section{Cechy gracza}
 \kosmoramus{} to gra fabularna. Są w niej gracze a nad wszystkim czuwa Mistrz Gry.
 
@@ -38,8 +38,8 @@ Dodatkowo każdy z bohaterów posiada:
 \end{description}
 
 \section{Testy}
-Rzucając jedną \dxx{} liczymy odległość punktu naszego gracza od wierzchołka po trójkątnej kratce, jeśli jest mniejsza niż wyrzucona wartość, to test jest zdany.
-Należy wyrzucić więc jak największą wartość.
+Rzucając jedną \dxx{} liczymy odległość punktu naszego gracza do wierzchołka po trójkątnej kratce, jeśli odległość jest mniejsza niż wyrzucona wartość, to test jest zdany.
+Należy wyrzucić więc jak największą wartość, a rozwój polega na zmniejszaniu odległości od wierzchołka.
 
 Mistrz gry może dodać utrudnienia i ułatwienia dla zdawalności testu pod postacią dodatkowych, lub ujemnych punktów do wyniku na kostce.
 Dodanie punktów do wyniku na kostce zmniejsza trudność testu, a odjęcie zwiększa trudność.
@@ -116,7 +116,7 @@ Moc może być użyta na trzy sposoby:
  \item Reakcja Mocy \abrm{} --- dodatkowy zmysł. Zdajesz ten test, gdy chcesz coś wyczuć, sprawdzić reakcję i podobne. Lekarz będzie mógł wykryć chorobę bez leczenia jej, a fala uderzeniowa zadziała, jak sonar.
 \end{itemize}
 
-Zapis współczynników mocy i testy przeprowadzane są w identyczny sposób, co na krysztale osobowości.
+Zapis współczynników mocy w identyczny sposób, co na krysztale osobowości, jednak testy przeprowadzane są w inny sposób.
 Tutaj mamy trzy smaki rozmieszczone na kątach trójkąta równobocznego o boku 20, trójkątna kratka pozwala liczyć odległości punktu mocy od kątów.
 Nazywa się to trójkątem mocy.
 
@@ -128,9 +128,55 @@ Nie można sobie używać mocy dowolnie, jak się chce.
 Gracz ma określoną ilość kartridży, użycie mocy zużywa jeden z nich.
 Te wkłady odnawiają się natychmiastowo w zamian za dobre uczynki, po jednym na godzinę snu, oraz z małym prawdopodobieństwem przy każdej akcji.
 
-Jeśli używając mocy nie uda ci się wyrzucić dostatecznie dużej wartości, następuje spalenie kartridża.
-Może to powodować różne dziwne zachowania, niekoniecznie złe.
-Możesz dostać korupcję, szynę, obciągnięcie wierzchołka, darmowe \xpmcn{}, lub inne dziwaczne zdarzenia. 
+Spalenie kartridża może być małe i duże (hiperspalenie).
+Małe może wystąpić przy zwykłym użyciu mocy. Ma skutki fabularne.
+Duże występuje przy nieudanym użyciu hipermocy, ma skutki mechaniczne.
+
+\subsection{Użycie mocy}
+Moc można użyć na trzy sposoby, oraz wykonać za jej pomocą różne, proste akcje.
+Pozwoli to na przykład na powalenie kogoś wystrzelonym dyskiem, ale nie pozwoli na wystrzelenie go po łuku, żeby trafić niewidoczny cel.
+Pozwoli na wystrzelenie łańcucha, aby prawdopodobnie zawinął się wokół szyi, ale nie pozwoli na zawiązanie wokół szyi, połączenie ogniw i aktywne duszenie w jednym ruchu (potrzeba by do tego trzech osobnych).
+
+Aby użyć mocy, należy wykonać dwa testy. Jeden na użycie odpowiedniego smaku mocy, a drugi to standardowy test cechy na krysztale osobowości.
+To symuluje fakt, że nawet, jak uda się wystrzelić z ręki ostrym pociskiem, to nie zawsze musimy trafić.
+Rzucamy zatem dwoma różnymi \dxx{} i sprawdzamy, jak poszło. Są cztery możliwości.
+
+\begin{tabular}{c c l}
+Test mocy	&	Test cechy	& Opis	\\
+\hline
+Zdany		&	Zdany		& Udało się wykonać akcję mocą. \\
+Zdany 		&	Niezdany	& Spudłowałeś, ale wygenerowany przedmiot nie znika. \\
+Niezdany	&	Zdany		& Następuje spalenie kartridża. \\
+Niezdany	&	Niezdany	& Niewypał, nie odejmujesz \abkar{}. \\
+\end{tabular}
+
+Przykładowo, jeśli moja moc to Echo, to chcąc wybuchnąć coś drganiami, robię test \absm{} i \abs{}, ale jeśli mam zamiar wprowadzić wroga w zawroty głowy, to lepsza będzie \absm{} i \abp{}.
+
+Niektóre cechy lepiej współgrają z mocą, a niektóre gorzej. To od ciebie zależy, w którą stronę możesz się rozwijać.
+
+\subsection{Użycie hipermocy}
+Hipermoc to użycie całej mocy jednocześnie.
+Pozwala na wykonywanie bardzo skomplikowanych akcji, ale jest też niebezpieczna.
+Używa cech z całej karty mocy.
+
+Suma trójkąta, to suma odległości punktu mocy od wszystkich wierzchołków.
+W to wchodzą obciągania, korupcje i szyny. W czystym trójkącie ta wartość wynosi zawsze 40.
+
+Test hipersumy, to test sumy trójkąta z tym, że stopniujemy jej podzieloną przez 10 wartość zaokrąglając w górę.
+Musimy wyrzucić za pomocą \dx{} wartość równą, lub większą.
+Przykładowo, jeśli nasza suma to 38, to dzieląc przez 10 i zaokrąglając w górę, dostajemy 4, czyli aby zdać test, trzeba wyrzucić $\ge4$.
+Natomiast, jeśli nasza suma to 41, to najbliższa następna to 5, czyli trzeba wyrzucić $\ge5$.
+
+Aby użyć hipermocy, trzeba zdać trzy testy, po jednym dla każdej cechy.
+Za każdym razem rzucamy tyloma \dx{}, ile wynosi stopień cechy, przynajmniej jedna kostka musi zdać test hipersumy.
+
+Przy nie zdaniu któregokolwiek, następuje hiperspalenie.
+Przy zdaniu wszystkich trzech testów odbieramy sobie tyle \abkar{}, na ilu kostkach nie zdaliśmy testu hipersumy. Przy dobrym rzucie może być to także 0.
+
+To oznacza, że początkowo używanie hipermocy jest bardzo trudne, ale rozwój czegokolwiek zawsze ułatwia.
+
+Przykładowo, przy sumie trójkąta 27 i cechach 2, 3, 1 rzucamy najpierw 2 kostkami \dx{}, potem 3 kostkami \dx{}, a potem jedną \dx{}. Za każdym rzutem przynajmniej jedna kostka musi być $\ge3$.
+Zużywamy tyle \abkar{}, ile kostek było $\le2$.
 
 \subsection{Rozwój mocy}
 Każdy smak mocy może być rozwijany osobno.
