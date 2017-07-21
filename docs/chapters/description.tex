@@ -41,7 +41,7 @@ Dodatkowo każdy z bohaterów posiada:
 Rzucając jedną \dxx{} liczymy odległość punktu naszego gracza do wierzchołka po trójkątnej kratce, jeśli odległość jest mniejsza niż wyrzucona wartość, to test jest zdany.
 Należy wyrzucić więc jak największą wartość, a rozwój polega na zmniejszaniu odległości od wierzchołka.
 
-Mistrz gry może dodać utrudnienia i ułatwienia dla zdawalności testu pod postacią dodatkowych, lub ujemnych punktów do wyniku na kostce.
+Mistrz Gry może dodać utrudnienia i ułatwienia dla zdawalności testu pod postacią dodatkowych, lub ujemnych punktów do wyniku na kostce.
 Dodanie punktów do wyniku na kostce zmniejsza trudność testu, a odjęcie zwiększa trudność.
 
 \section{Życie}
@@ -71,6 +71,17 @@ Aby policzyć korupcję:
 \end{enumerate}
 Może się zdarzyć, że punkt gracza znajdzie się w zaciemnionym obszarze. 
 Na szczęście cechy można modyfikować i w przyszłości uciec z utrudniającego obszaru.
+
+\section{Obidy}
+Obid --- obiekt identyfikujący, może być w formie karty, kulki, koreczka.
+Używa się ich do ustalania przebiegu walki.
+Powinny być w olbrzymiej ilości kolorów, każdy gracz i wróg musi mieć inny.
+Ustawiane będą w linii, więc dobrze mieć też jakąś długą podstawkę.
+
+Postać ma ilość obidów, równej ilości tysiącom w liczbie punktów \xpmcn{}.
+Tyle obidów, ile tysięcy \xpmcn{}.
+Czyli albo możesz rozwijać postać zarobionymi punktami \xpmcn{}, albo chomikować je i zyskać dodatkowe ruchy w walce.
+Są też modyfikatory poprzez chipy, mutacje, urządzenia, itp.
 
 \section{Chipy}
 Chipy dzielą się na aktywne i pasywne.
@@ -281,6 +292,11 @@ Wiedza jest bardzo wąska i specjalizowana.
 Przykładowe wiedze, to działanie elektronicznych zamków biometrycznych na tęczówkę, naprawa kuchenek pokładowych na statkach kosmicznych, biologia serc smoków określonego gatunku, czy malarstwo akwarelami na papierze.
 Zapytasz się po co ci tak szczegółowe wiedze, do puki nie będziesz musiał otworzyć zamka, przerobić kuchenkę na bombę, przeszczepić serca jaszczurowi, albo namalować krwią na papierze toaletowym pejzaż, który tak zachwyci strażnika, że puści cię wolno.
 
+Wiedza jest natychmiastowa, w każdej chwili można jej użyć, aby ułatwić sobie aktualny test.
+
+Pod wiedze podchodzą również umiejętności, przykładowo specjalny unik.
+Przy czym każdy inny unik może dawać różne ułatwienia do testów.
+
 \section{Problem Psychiczny}
 Przy stracie życia uaktywnia się twój problem psychiczny.
 Takie dynamiczne życie na pewno odciska swoje pięto na psychice. 
@@ -291,8 +307,9 @@ Każdy problem ma jakieś natężenie maksymalne.
 Jeśli wystąpi problem psychiczny, losujesz go z listy swoich problemów i losujesz natężenie.
 Aby się wyleczyć musisz zdać test \abh{}.
 
-\section{Uszkodzenia ciała}
-Tutaj idą wszystkie fizyczne uszkodzenia, jak blizny i choroby.
+\section{Modyfikacje ciała}
+Tutaj idą wszystkie fizyczne uszkodzenia, jak blizny i choroby, ale także obrażenia fabularne, typu zwinięta w trąbkę noga, czy kawałek uniwersalności w sercu.
+Powodują, że czasem nie możesz wykonać jakiejś akcji, lub masz spore utrudnienia.
 
 Za uszkodzenie uznajemy także wszystkie ozdoby, jak piercing i tatuaże.
 Nie wpływają one za bardzo na grę (no chyba, że stoisz przed wielkim elektromagnesem, albo lecą na ciebie zdalnie sterowane rakiety.
@@ -305,11 +322,43 @@ Tutaj idą wszystkie pasywne zachowania uzyskane przez chipy pasywne, uszkodzeni
 Losujemy procenty za pomocą \dc{} i wykonujemy akcję, jeśli wartość jest mniejsza, niż ilość procent , wykonujemy akcję.
 Zawsze istnieją podstawowe akcje pasywne:
 \begin{description}
-\item[5\%] Wyleczenie rany, dodanie \abzyc{} jeśli mniejszy od maksimum.
-\item[5\%] Dodanie 1 \abkar{}.
-\item[10\%] Zakończenie ewentualnego problemu psychicznego bez testu \abh{}.
-\item[] Akcje każdego z urządzeń, jakie posiadasz.
+	\item[5\%] Wyleczenie rany, dodanie \abzyc{} jeśli mniejszy od maksimum.
+	\item[5\%] Dodanie 1 \abkar{}.
+	\item[10\%] Zakończenie ewentualnego problemu psychicznego bez testu \abh{}.
+	\item[] Akcje każdego z urządzeń, jakie posiadasz.
 \end{description}
+
+\section{Uniwersalność}
+Uniwersalność to nieprawidłowa materia kosmiczna. Łamie zasady fizyki i może być absolutnie wszystkim.
+Powstała jako losowy wysyp wszystkiego, z generatora wszystkiego, do symulacji światów w słoikach.
+
+Postać może używać uniwersalności, jeśli zostanie nią zakażona fabularnie.
+Dokleja się wtedy czworościan z różowym wierzchołkiem \abu{} po drugiej stronie kryształu osobowości, niż jest punkt gracza.
+
+W gruncie rzeczy, uniwersalność pozwala modyfikować rozgrywkę w boski sposób (za zgodą Mistrza Gry, oczywiście).
+Działa tylko w walce i wymusza na Mistrzu Gry przestawienie układu pomieszczenia, przeniesienie postaci, czy dodanie komuś pocisków.
+Zakładamy, że wygląda to tak, jakby od zawsze przed walką tak było. Modyfikujemy przy tym nieznacznie historię rozgrywki, ale nie przeliczamy na nowo strat życia.
+Nie możemy zatem dodać komuś życia, jeśli na początku miał maksymalną ilość, ani przenieść wroga nad przepaść, gdyż nigdy sam by się tam nie pojawił.
+Możemy jedynie modyfikować świat w dokonany, logiczny i możliwy sposób, czyli na przykład przenieść truchło poległego od tasaka kolegi, spod nóg bossa, pod ścianę, zakładając że został tam trafiony pociskiem i tam umarł.
+Jednak to niemożliwe i zakazane by było, gdyby komnata z bossem nagle miała pośrodku dziurę, do której wpada wróg.
+
+Do użycia uniwersalności należy wykonać dwa testy, test \abu{} i test cechy przy modyfikacji, jaką chcemy wykonać.
+Jeśli po zdaniu \abu{}, nie uda się zdać testu cechy, to dzieją się straszliwe rzeczy w próbowanym temacie, ustalane tylko przez Mistrza Gry.
+\begin{description}
+	\item[\abi{}] Zmiana układu pomieszczenia, obiektów.
+	\item[\abs{}] Przeniesienie kogoś innego z paczki, w inne miejsce.
+	\item[\abt{}] Modyfikacja przyjaciela.
+	\item[\abh{}] Modyfikacja wroga.
+	\item[\abp{}] Zobaczenie czegoś nowego i przydatnego.
+	\item[\aba{}] Przeniesienie siebie samego w inne miejsce.
+\end{description}
+Zwróć uwagę, że nie możesz pomagać samemu sobie, jedynie zmienić miejsce, w którym od początku stałeś.
+Nie możesz przenosić wrogów.
+
+Jeśli bardzo chcesz użyć uniwersalności poza walką, możesz wyzwać jednego z twoich przyjaciół na walkę na śmierć i życie.
+Walka musi być prawdziwa, a nie tylko sparing.
+
+
 
 
 

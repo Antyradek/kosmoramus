@@ -6,30 +6,30 @@ Także są tutaj przykładowi gracze z których możecie sobie wybrać.
 
 \section{Moce}
 Zmienna $p$ jest obecnym poziomem cechy.
+Każdą wytworzoną materię można telepatycznie zniknąć w jednej turze.
 
 \subsection{Łańcuch}
 Postać może wytworzyć i modyfikować łańcuch.
 Łańcuch ma określoną długość i wytrzymałość.
 W kilku turach można tworzyć bardzo długi łańcuch poprzez wytworzenie i połączenie fragmentów.
-Można go telepatycznie zniknąć.
 \begin{description}
 	\item[SM] Wytworzenie łańcucha o długości $l$ i wystrzelenie w powietrze z prędkością ruchu ręki (test \aba{}).
-	\item[DM] Ruszanie łańcuchem telepatycznie w odległości $d$, przerwanie go, modyfikowanie.
-	\item[RM] Wykrycie położenia i dotyku łańcucha.
+	\item[DM] Ruszanie łańcuchem telepatycznie w odległości $d$, przerwanie go, modyfikowanie, zniknięcie.
+	\item[RM] Wykrycie położenia, stanu i dotyku łańcucha.
 \end{description}
 \begin{itemize}
 	\item Długość wytworzonego łańcucha $l = 10p \ \si{\centi\metre}$
 	\item Wytrzymałość $F = 20p \ \si{\newton}$
-	\item Odległość $d = p \ \si{\metre}$
+	\item Odległość modyfikacji i wyczucia $d = p \ \si{\metre}$
 \end{itemize}
 
 \subsection{Tarcza}
 Wytworzenie okrągłej tarczy o średnicy \SI{1}{\metre}.
-Można nią ruszać w granicach maksymalnej siły, przekroczenie natychmiast niszczy tarczę.
-Można telepatycznie zniknąć ją przed czasem.
+Można nadawać jej siłę w określonych limitach, przekroczenie natychmiast niszczy tarczę.
+Na tarczę nie działa grawitacja.
 \begin{description}
 	\item[SM] Wytworzenie tarczy w odległości $d$ od siebie.
-	\item[DM] Ruch tarczą z siłą nie większą, niż $F$.
+	\item[DM] Ruch tarczą z siłą nie większą, niż $F$, przedwczesne zniknięcie.
 	\item[RM] Wykrycie pozycji i dotyku na tarczy.
 \end{description}
 \begin{itemize}
@@ -45,7 +45,7 @@ Da się poruszać lekkimi przedmiotami w odległości \SI{1}{\metre}.
 Można wykryć prędkość poruszania się obiektu i jego pozycję.
 \begin{description}
 	\item[SM] Nadanie siły $F$ obiektowi przez określony czas $t$.
-	\item[DM] Telekineza w małej odległości.
+	\item[DM] Telekineza małych obiektów w małej odległości.
 	\item[RM] Wykrycie prędkości, obrotu i pozycji obiektu.
 \end{description}
 \begin{itemize}
@@ -54,18 +54,17 @@ Można wykryć prędkość poruszania się obiektu i jego pozycję.
 	\item Czas działania $t = p \ \text{tur}$
 \end{itemize}
 
-\subsection{Frisbee}
-Postać wytwarza i rzuca okrągłe i płaskie pierścienie (jak frisbee) z ostrymi krawędziami.
+\subsection{Pierścienie}
+Postać wytwarza i rzuca okrągłe i płaskie pierścienie (jak frisbee) z ostrymi i twardymi krawędziami.
 Średnica zewnętrzna nie może przekroczyć \SI{1}{\metre}, a wewnętrzna jest dowolna.
-Krawędzie nie tną stwórcy, ale zadają obrażenia wszystkim innym w wielkości $k$ \abzyc{}.
-Celność jest osiągana testem \aba{}.
+Krawędzie nie tną stwórcy, ale zadają obrażenia wszystkim innym w wielkości $kv$ \abzyc{}.
 Na pierścienie nie działa grawitacja ale nie są w stanie utrzymać więcej, jak \SI{1000}{\newton} (jednego człowieka).
-Nie można ich obracać w innej płaszczyźnie, niż są obecnie.
-Nie można ich zniknąć, znikają same po 10 rundach.
+Nie można ich obracać w innej płaszczyźnie, niż są ustawione obecnie.
+Można się zastawić pierścieniem, jak tarczą, ale wytrzymuje on tylko jedno uderzenie.
 \begin{description}
 	\item[SM] Wytworzenie pierścienia i rzucenie nim z prędkością $v$.
-	\item[DM] Ruch pierścieniem w płaszczyźnie wytworzenia z maksymalną prędkością $v$, w odległości $d$.
-	\item[RM] Odczucie, co pierścień dotyka.
+	\item[DM] Ruch pierścieniem w płaszczyźnie wytworzenia z maksymalną prędkością $v$, w odległości $d$, zniknięcie.
+	\item[RM] Odczucie pozycji i czego pierścień dotyka.
 \end{description}
 \begin{itemize}
 	\item Odległość sterowania $d = p \ \si{\metre}$
@@ -75,11 +74,10 @@ Nie można ich zniknąć, znikają same po 10 rundach.
 
 \subsection{Kolec}
 Gracz strzela kolcem.
-Dodajemy $c$ do kostki o tyle ułatwiając sobie test.
+Po zdaniu testu mocy, dodajemy $c$ do kostki o tyle ułatwiając sobie test cechy.
 Postać czuje, gdy ktoś dotyka kolca.
-Może go telepatycznie zniknąć.
 \begin{description}
-	\item[SM] Wystrzelenie kolca odbierającego $k$ \abzyc{}, z prędkością $v$.
+	\item[SM] Wystrzelenie kolca odbierającego $kv$ \abzyc{}.
 	\item[DM] Zniknięcie, nadanie siły testem \abs{}.
 	\item[RM] Odczucie pozycji kolca i czego dotyka.
 \end{description}
@@ -95,20 +93,20 @@ Może nim rzucić, zburzyć coś w odpowiednim kształcie i zbadać strukturę.
 \begin{description}
 	\item[SM] Impuls na stożku o kącie $\alpha$ i zasięgu $l$, w odległości $d$ od postaci.
 	\item[DM] Wytworzenie określonego kształtu impulsu przy dotyku ręką.
-	\item[RM] Dotknięcie i zbadanie struktury materiału.
+	\item[RM] Dotknięcie i zbadanie struktury materiału na małą głębokość.
 \end{description}
 \begin{itemize}
-	\item Kąt $\alpha = 0.2p\pi \ \si{\radian}$
-	\item Zasięg $l = 0.5p \ \si{\meter}$
+	\item Kąt $\alpha = 0,2p\pi \ \si{\radian}$
+	\item Zasięg $l = 0,5p \ \si{\meter}$
 	\item Odległość $d = p \ \si{\meter}$
 \end{itemize}
 
 \subsection{Echo}
-Postać generuje fale soniczne, dzięki którym widzi w ciemności, a także potrafi wprawić w wibracje jakiś obiekt.
+Postać generuje fale soniczne, dzięki którym widzi w ciemności, a także potrafi wprawić w wibracje jakiś obiekt z zamierzonym skutkiem.
 \begin{description}
-	\item[SM] Wprawienie w wibracje obiektu w zasięgu $d$, którego pozycja jest znana. Wykonaj test \aba{} i dodaj $c$ do kostki.
+	\item[SM] Wprawienie w wibracje obiektu w zasięgu $d$, którego pozycja jest znana. Dodaj $c$ do kostki przy teście cechy.
 	\item[DM] Dokładne poznanie kształtu obiektów w kuli o promieniu $r$, w zasięgu $d$.
-	\item[RM] Poznanie przybliżonego kształtu otoczenia w zasięgu $d$.
+	\item[RM] Poznanie przybliżonego kształtu otoczenia w zasięgu $d$ od ciebie.
 \end{description}
 \begin{itemize}
 	\item Zasięg $d = p \ \si{\meter}$
@@ -116,8 +114,9 @@ Postać generuje fale soniczne, dzięki którym widzi w ciemności, a także pot
 	\item Celność $c = p$
 \end{itemize}
 
-% elektrostatyka
-% leczenie
+% TODO leczenie
+
+% TODO łączenie życia
 
 \section{Przedmioty}
 \begin{description}
@@ -192,12 +191,16 @@ Gracz wysuwa trzy krótkie kolce z przedramienia.
 
 
 
-% Przykładowe chipy wraz z opisem uszkodzeń, efektów, cech
+% TODO Przykładowe chipy wraz z opisem uszkodzeń, efektów, cech
 
-% Mutacje
+% TODO Mutacje nietypowe
 
-% Przedmioty
+% TODO Przedmioty
 
-% Urządzenia
+% TODO Urządzenia
 
-% Wiedza
+% TODO Wiedza
+
+% TODO Przykładowe skażenia uniwersalnością
+% Struny w żyłach leczące rany
+% Wytwarzanie osobnych części ciała kosztem życia

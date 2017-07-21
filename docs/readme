@@ -1,4 +1,4 @@
-Tutaj jest dokumentacja oraz instrukcje do gry w LaTeXu. 
+Tutaj jest dokumentacja, oraz instrukcje do gry w LaTeXu. 
 Wszystko bardzo zmienne i niestałe.
 
 Do kompilacji użyj załączonego makefile.
@@ -7,7 +7,11 @@ Ze względu na wygenerowanie pliku spisu tereści, kompilacja może go nie zawie
 
 TODO:
 Światłografy, które dodają perki do mocy (świecące kolce, kolczasty łańcuch, piła tarczowa na pierścieniu)
-Podział na tabelę spaleń mechaniki i fabulanych
-Łączenia smaków mocy, po dwa na każdy bok trójkąta, dodać małe trójkąty o boku 5 do boku.
 Dodać tarcze, blokujące część ataku, blokujące wszystko kosztem wkładów.
 Dodać ilość obrażeń dla każdej broni.
+Dodać pola obrażeń fabularnych i przedmioty naprawiające je.
+Opisać mechanikę U (uniweralność). Dodatkowy wierzchołek naklejany na kryształ. Dla osób skażonych uniwersalnością.
+Wydruki stożków o kątach n * 0,1 pi
+
+Modyfikatory zmieniające obidy do walki (dodatkowe, szansa na opuszczenie)
+Problem psychiczny z usunięciem obidu.
