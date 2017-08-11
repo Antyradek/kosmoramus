@@ -122,21 +122,26 @@ Postać generuje fale soniczne, dzięki którym widzi w ciemności, a także pot
 \begin{description}
 	\item[Wkłady antymaterii] Podstawowe zasilanie broni i urządzeń.
 	\item[Wkłady do szyfratora] Jedyne i niepowtarzalne do jedynej i niepowtarzalnej broni.
+	\item[Wkłady do baniecznicy] Mogą mieć dowolne moce, także ujemne,
 \end{description}
 
 \section{Bronie}
 Pif-paf, ziuu, (dźwięk zamarzającej czasoprzestrzeni).
+W swoim obidzie użytkownik może całkowicie opróżnić magazynek (na przykład aby zmienić kolejność wkładów), ale dopiero w następnym może załadować jeden nowy wkład.
+
 \subsection{Mostownik \abs{}}
 
-\begin{tabular}{lr}
+\begin{tabular}{rl}
 Wkłady & Antymateria \\
 Magazynek & 5 \\
 Załadowanie na turę & 1 \\
+Obrażenia & 10 \\
 \end{tabular}
 
 Wielka deska długości metra.
 Tworzy rzucane, paraboliczne mosty do celu.
 Most utrzymuje się w powietrzu zużywając jeden nabój na rundę.
+Jeśli kogoś trafi, zadaje mu obrażenia.
 \begin{enumerate}
 	\item Most się tworzy, ale wije się w górę i w dół.
 	\item Most się tworzy, ale wije się na boki.
@@ -147,12 +152,12 @@ Most utrzymuje się w powietrzu zużywając jeden nabój na rundę.
 	\item Tworzą się tylko granice, jak szyny. 
 	\item Most jest dziwnie lepki.
 	\item Most jest tak śliski, że nie da się go używać.
-	\item Most tworzy się w dziwnym kierunku \dii{}, czy przetnie strzelającego na pół.
+	\item Most tworzy się w dziwnym kierunku, wykonaj test szczęścia \aba{}, czy kogoś przetnie na pół.
 \end{enumerate}
 
 \subsection{Szyfrator \abt{}}
 
-\begin{tabular}{lr}
+\begin{tabular}{rl}
 Wkłady & Szyfrator \\
 Magazynek & 1 \\
 Załadowanie na turę & 0,5 \\
@@ -170,6 +175,46 @@ Jeśli nie trafiło się w poprzedniej rundzie, można strzelać ponownie bez pr
 
 Przy niezdaniu testu cechy nie ma żadnych efektów ubocznych!
 
+\subsection{Baniecznica \abt{}}
+
+\begin{tabular}{rl}
+Wkłady & Wkłady do baniecznicy o różnych mocach \\
+Magazynek & 10 \\
+Załadowanie na turę & 2 \\
+\end{tabular}
+
+Baniecznica jest wstanie rozciągnąć na użytkowniku pole siłowe, przyjmujące dowolne obrażenia i zużywając wkłady.
+Gdy poprawnie użyjesz baniecznicy, otrzymujesz pole siłowe aż do następnego obidu, blokujące wszystkie obrażenia na reakcję w wymiarze załadowania.
+Przez powierzchnię nie można przejść i blokuje ona powietrze.
+Jeśli pochłonie całe obrażenia, odbija je w losowym kierunku, zależnym od testu szczęścia \abh{}.
+Sama aktywacja bańki nie zużywa energii.
+
+Każdy wkład do baniecznicy ma różną moc, jest to ilość obrażeń, które pochłonie.
+Jeśli wkład ma ujemną moc, zwiększa ilość obrażeń (mogą być nadal pochłonięte przez następne wkłady).
+Wkłady są zużywane po kolei.
+Po wykorzystaniu wkładu, kolejne obrażenia odejmowane są od następnego.
+Naruszony wkład znika całkowicie, przykładowo wkład o mocy 5, przyjmujący 3 obrażenia, zniknie zupełnie, a nie zmieni się na wkład o mocy 2.
+
+Po pochłonięciu wszystkich obrażeń, wykonaj test szczęścia \abh{} na to, gdzie odbije się skierowany w ciebie atak.
+Wielki wynik odbija całość we wroga, lub przyjaciela. Mały odbija w innym kierunku.
+
+Na przykład, jeśli mamy rząd wkładów o mocach: 4, 6, -1, 4, 10 i ktoś spróbuje zadać nam 11 punktów obrażeń, to pierwsze dwa wkłady pochłoną 10 obrażeń i zostanie tylko jedno.
+Trzeci wkład o ujemnej wartości zwiększy ilość obrażeń do 2, które to zostaną pochłonięte przez czwarty, który nie zużyje się całkowicie.
+Jednak jako, że czwarty został naruszony, to także znika. Zostaje tylko ostatni wkład o mocy 10.
+
+\begin{enumerate}
+	\item Stworzona bańka jest bardzo malutka, gnieciesz się niemiłosiernie i w następnym obidzie zabraknie ci powietrza.
+	\item Bańka tworzy się tak wielka, że obejmuje także najbliższą istotę (może być wróg).
+	\item Powstaje tylko \diiii{} połówka bańki: 1-przednia, 2-tylna, 3-górna, 4-dolna.
+	\item Bańka jest dziurawa i przepuści połowę obrażeń.
+	\item Wszystkie załadowane wkłady scalają się w jeden o sumie ich mocy.
+	\item Bańka zamiast objąć ciebie, obejmuje najbliższą osobę (ale nadal masz sterowanie).
+	\item Najmniejszy załadowany wkład odwraca znak.
+	\item Największy załadowany wkład odwraca znak.
+	\item Wszystkie załadowane wkłady odwracają znaki.
+	\item Nic się nie dzieje, ale tracisz największy załadowany wkład.
+\end{enumerate}
+
 \section{Chipy aktywne}
 Rurka do oddychania pod wodą wkręca mi się w głowę.
 
@@ -180,10 +225,10 @@ Gracz wysuwa trzy krótkie kolce z przedramienia.
 	\item Tym razem wysuwa ci się tylko środkowy.
 	\item Tym razem wysuwają ci się tylko boczne.
 	\item Środkowy kolec wypada na podłogę.
-	\item Środkowy kolec wystrzeliwuje, \dii{} czy kogoś trafi.
+	\item Środkowy kolec wystrzeliwuje, test szczęścia \aba{}, czy kogoś trafi.
 	\item Kolce przestają się wysuwać w ogóle.
 	\item Kolce przestają się chować w ogóle.
-	\item Wszystkie trzy kolce wystrzeliwują we wszystkie strony.
+	\item Wszystkie trzy kolce wystrzeliwują we wszystkie strony, wykonaj testy szczęścia \aba{}.
 	\item Kolce wysuwają się w drugą stronę, w rękę, -5 \abzyc{}.
 	\item Zaczynają ciągle szybko wsuwać się i wysuwać.
 	\item Wysuwają się od teraz tylko do połowy.
